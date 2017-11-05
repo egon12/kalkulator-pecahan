@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorButtonNormal</item>
+
+    </style>
+
+    <style name="button_plus">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:onClick">btnPressed</item>
+    </style>
+
+    <style name="button_min">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:text">-</item>
+        <item name="android:onClick">btnPressed</item>
+    </style>
+
+    <style name="edit_text_cnt">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:editable">false</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+
+    <style name="edit_text_sum">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:editable">false</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">textEnd</item>
+    </style>
+
+
+</resources>

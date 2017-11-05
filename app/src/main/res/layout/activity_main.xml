@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.egon12.kalkulatorpecahan.MainActivity">
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Rp. 105.000.000" />
+
+    <!--
+    <Switch
+        android:id="@+id/keyboardSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Keyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        -->
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="btnPressed"
+        android:text="reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 100 rb -->
+    <Button
+        android:id="@+id/btn_100rb_plus"
+        style="@style/button_plus"
+        android:layout_marginTop="32dp"
+        android:onClick="btnPressed"
+        android:text="100.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalTextView" />
+
+    <Button
+        android:id="@+id/btn_100rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_100rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_100rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_100rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_100rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_100rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_100rb"
+        style="@style/edit_text_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_100rb_plus"
+        tools:text="3.000.000" />
+
+    <!-- 50 rb -->
+    <Button
+        android:id="@+id/btn_50rb_plus"
+        style="@style/button_plus"
+        android:text="50.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_100rb_plus" />
+
+    <Button
+        android:id="@+id/btn_50rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_50rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_50rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_50rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_50rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_50rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_50rb"
+        style="@style/edit_text_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_50rb_plus"
+        tools:text="3.000.000" />
+
+    <!-- 20 rb -->
+    <Button
+        android:id="@+id/btn_20rb_plus"
+        style="@style/button_plus"
+        android:text="20.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_50rb_plus" />
+
+    <Button
+        android:id="@+id/btn_20rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_20rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_20rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_20rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_20rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_20rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_20rb"
+        style="@style/edit_text_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_20rb_plus"
+        tools:text="3.000.000" />
+
+    <!-- 10 rb -->
+    <Button
+        android:id="@+id/btn_10rb_plus"
+        style="@style/button_plus"
+        android:text="10.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_20rb_plus" />
+
+    <Button
+        android:id="@+id/btn_10rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_10rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_10rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_10rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_10rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_10rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_10rb"
+        style="@style/edit_text_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_10rb_plus"
+        tools:text="3.000.000" />
+
+
+    <!-- 5 rb -->
+    <Button
+        android:id="@+id/btn_5rb_plus"
+        style="@style/button_plus"
+        android:text="5.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_10rb_plus" />
+
+    <Button
+        android:id="@+id/btn_5rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_5rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_5rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_5rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_5rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_5rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_5rb"
+        style="@style/edit_text_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_5rb_plus"
+        tools:text="3.000.000" />
+
+    <!-- 2 rb -->
+    <Button
+        android:id="@+id/btn_2rb_plus"
+        style="@style/button_plus"
+        android:text="2.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_5rb_plus" />
+
+    <Button
+        android:id="@+id/btn_2rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_2rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_2rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_2rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_2rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_2rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_2rb"
+        style="@style/edit_text_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_2rb_plus"
+        tools:text="3.000.000" />
+
+    <!-- 1 rb -->
+    <Button
+        android:id="@+id/btn_1rb_plus"
+        style="@style/button_plus"
+        android:text="1.000 +"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_2rb_plus" />
+
+    <Button
+        android:id="@+id/btn_1rb_min"
+        style="@style/button_min"
+        app:layout_constraintStart_toEndOf="@+id/btn_1rb_plus"
+        app:layout_constraintTop_toTopOf="@+id/btn_1rb_plus" />
+
+    <TextView
+        android:id="@+id/cnt_1rb"
+        style="@style/edit_text_cnt"
+        app:layout_constraintEnd_toStartOf="@+id/sum_1rb"
+        app:layout_constraintTop_toTopOf="@+id/btn_1rb_plus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/sum_1rb"
+        style="@style/edit_text_sum"
+        android:layout_width="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_1rb_plus"
+        tools:text="3.000.000" />
+
+
+</android.support.constraint.ConstraintLayout>
