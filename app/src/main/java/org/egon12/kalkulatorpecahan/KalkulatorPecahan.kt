@@ -1,7 +1,9 @@
 package org.egon12.kalkulatorpecahan
 
 /**
- * Created by nidiastephanie on 11/4/17.
+ * Kalkulator Pecahan
+ *
+ * @author egon12 <egon.firman@gmail.com on 11/4/17.
  */
 
 class KalkulatorPecahan {

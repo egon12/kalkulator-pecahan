@@ -160,8 +160,6 @@ class KalkulatorPecahanTest {
         assertEquals(0, k.cnt5rb)
         assertEquals(0, k.cnt2rb)
         assertEquals(0, k.cnt1rb)
-
-
     }
 
     @Test

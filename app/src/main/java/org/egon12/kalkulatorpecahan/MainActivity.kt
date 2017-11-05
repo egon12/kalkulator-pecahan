@@ -1,12 +1,12 @@
 package org.egon12.kalkulatorpecahan
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
+import android.support.constraint.ConstraintLayout.LayoutParams
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.Arrays.asList
 import org.egon12.kalkulatorpecahan.KalkulatorPecahan.Companion.format
+import java.util.Arrays.asList
 
 
 class MainActivity : AppCompatActivity() {
@@ -61,19 +61,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun switchLayout(view: View) {
-
+    fun switchLayout() {
         for (sum_text in asList(sum_1rb, sum_2rb, sum_5rb, sum_10rb, sum_20rb, sum_50rb, sum_100rb)) {
-            var layoutParams = sum_text.layoutParams as ConstraintLayout.LayoutParams
-            layoutParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID
-            layoutParams.endToEnd = ConstraintLayout.LayoutParams.UNSET
+            val layoutParams = sum_text.layoutParams as LayoutParams
+            layoutParams.startToStart = LayoutParams.PARENT_ID
+            layoutParams.endToEnd = LayoutParams.UNSET
             sum_text.layoutParams = layoutParams
         }
 
         for (btn_text in asList(btn_1rb_plus, btn_2rb_plus, btn_5rb_plus, btn_10rb_plus, btn_20rb_plus, btn_50rb_plus, btn_100rb_plus)) {
-            var layoutParams = btn_text.layoutParams as ConstraintLayout.LayoutParams
-            layoutParams.endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
-            layoutParams.startToStart = ConstraintLayout.LayoutParams.UNSET
+            val layoutParams = btn_text.layoutParams as LayoutParams
+            layoutParams.endToEnd = LayoutParams.PARENT_ID
+            layoutParams.startToStart = LayoutParams.UNSET
             btn_text.layoutParams = layoutParams
         }
     }
